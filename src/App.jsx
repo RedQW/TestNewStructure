@@ -1,12 +1,9 @@
 import "./App.css";
-import TableExample1 from "./features/TestPage/TableExamle";
-import FormAndButton from "./features/TestPage/FormModal";
-
+import TestPage from "./pages/TestPage";
 function App() {
   return (
     <div className="app-container">
-    <FormAndButton></FormAndButton>
-    <TableExample1></TableExample1>
+        <TestPage></TestPage>
     </div>
   );
 }
