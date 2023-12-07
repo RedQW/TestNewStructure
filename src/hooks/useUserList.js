@@ -6,7 +6,6 @@ import { getUserSelector } from "../redux/selector";
 const useUserList = () => {
     const dispatch = useDispatch();
     const userList = useSelector(getUserSelector)
-  
     useEffect(() => {
       const fetchData = async () => {
         try {

@@ -1,14 +1,8 @@
 import { Table } from "antd";
 import PropTypes from "prop-types";
 import { CalendarOutlined, UserOutlined } from "@ant-design/icons";
-import { useDispatch, useSelector } from "react-redux";
-import { getUserSelector } from "../../redux/selector";
-import { useEffect } from "react";
-import { getUser } from "../../redux/Slices/TestSlice";
-import useUserList from "../../hooks/useUserList";
 
-export default function TableExample1() {
-  const userList = useUserList()
+export default function TableExample1({ dataSource }) {
   const column = [
     {
       title: (
@@ -64,8 +58,11 @@ export default function TableExample1() {
     <Table
       style={{ width: 800 }}
       columns={column}
-      dataSource={userList}
+      dataSource={dataSource}
     ></Table>
   );
 }
 
+TableExample1.propTypes = {
+  dataSource: PropTypes.array.isRequired,
+};
